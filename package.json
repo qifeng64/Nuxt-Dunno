@@ -10,9 +10,13 @@
         "postinstall": "nuxt prepare"
     },
     "dependencies": {
+        "@nuxt/kit": "^3.10.3",
         "nuxt": "^3.10.3",
         "oh-my-live2d": "^0.10.0",
         "vue": "^3.4.21",
         "vue-router": "^4.3.0"
+    },
+    "devDependencies": {
+        "less": "^4.2.0"
     }
 }
