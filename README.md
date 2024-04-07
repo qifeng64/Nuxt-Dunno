@@ -25,3 +25,11 @@ pnpm run dev
 pnpm run build
 
 ```
+
+## Prisma
+
+```bash
+
+pnpm dlx prisma studio
+
+```

@@ -8,6 +8,7 @@
         <NuxtLink to="/posts/2">文章2</NuxtLink>
         <br />
         <el-button @click="getAllUserInfo()">获取数据库中所有user信息</el-button>
+        <el-button @click="addUser()">add new user</el-button>
     </ClientOnly>
 </template>
 
@@ -18,6 +19,15 @@ const getAllUserInfo = async () => {
     });
     // 客户端，浏览器打印
     console.log(users);
+};
+
+const addUser = () => {
+    const newUser = useFetch("/api/users", {
+        method: "POST",
+        body: { name: "admin", email: "newadmin@admin.com", password: "123456" },
+        headers: { "Content-Type": "application/json" },
+    });
+    console.log(newUser);
 };
 </script>
 
