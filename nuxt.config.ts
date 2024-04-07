@@ -6,4 +6,5 @@ const { resolve } = createResolver(import.meta.url);
 export default defineNuxtConfig({
     devtools: { enabled: true },
     css: [resolve("./assets/css/index.less")],
+    modules: ["@element-plus/nuxt"],
 });

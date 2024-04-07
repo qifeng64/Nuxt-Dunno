@@ -7,9 +7,18 @@
         <br />
         <NuxtLink to="/posts/2">文章2</NuxtLink>
         <br />
+        <el-button @click="getAllUserInfo()">获取数据库中所有user信息</el-button>
     </ClientOnly>
 </template>
 
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+const getAllUserInfo = async () => {
+    const users = await useFetch("/api/users", {
+        query: { name: "admin" },
+    });
+    // 客户端，浏览器打印
+    console.log(users);
+};
+</script>
 
 <style></style>
