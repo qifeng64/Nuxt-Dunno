@@ -19,6 +19,8 @@
         "vue-router": "^4.3.0"
     },
     "devDependencies": {
+        "@babylonjs/core": "^7.6.1",
+        "@babylonjs/loaders": "^7.6.1",
         "@element-plus/nuxt": "^1.0.8",
         "element-plus": "^2.6.3",
         "less": "^4.2.0",

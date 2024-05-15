@@ -7,6 +7,8 @@
         <br />
         <NuxtLink to="/posts/2">文章2</NuxtLink>
         <br />
+        <NuxtLink to="/babylon">babylonjs</NuxtLink>
+        <br />
         <el-button @click="getAllUserInfo()">获取数据库中所有user信息</el-button>
         <el-button @click="addUser()">add new user</el-button>
     </ClientOnly>
@@ -15,7 +17,7 @@
 <script lang="ts" setup>
 const getAllUserInfo = async () => {
     const users = await useFetch("/api/users", {
-        query: { name: "admin" },
+        // query: { name: "admin" },
     });
     // 客户端，浏览器打印
     console.log(users);
